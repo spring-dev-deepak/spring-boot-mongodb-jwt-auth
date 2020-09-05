@@ -35,11 +35,10 @@ public class User {
     public User() {
     }
 
-    public User(@NotBlank @Size(max = 20) String username, @Email @NotBlank @Size(max = 40) String email, @NotBlank @Size(max = 60) String password, Set<Role> roles) {
+    public User(@NotBlank @Size(max = 20) String username, @Email @NotBlank @Size(max = 40) String email, @NotBlank @Size(max = 60) String password) {
         this.username = username;
         this.email = email;
         this.password = password;
-        this.roles = roles;
     }
 
     public String getId() {

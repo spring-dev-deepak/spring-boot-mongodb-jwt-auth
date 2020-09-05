@@ -4,6 +4,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.List;
+import java.util.Set;
 
 public class SignupRequest {
 
@@ -19,7 +20,7 @@ public class SignupRequest {
     @Size(min = 6, max = 40)
     private String password;
 
-    private List<String> roles;
+    private Set<String> roles;
 
     public String getUsername() {
         return username;
@@ -45,11 +46,11 @@ public class SignupRequest {
         this.password = password;
     }
 
-    public List<String> getRoles() {
+    public Set<String> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<String> roles) {
+    public void setRoles(Set<String> roles) {
         this.roles = roles;
     }
 }

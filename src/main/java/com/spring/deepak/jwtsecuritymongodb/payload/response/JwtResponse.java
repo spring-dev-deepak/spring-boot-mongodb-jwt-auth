@@ -2,6 +2,7 @@ package com.spring.deepak.jwtsecuritymongodb.payload.response;
 
 import com.spring.deepak.jwtsecuritymongodb.models.Role;
 
+import java.util.List;
 import java.util.Set;
 
 public class JwtResponse {
@@ -11,9 +12,9 @@ public class JwtResponse {
     private String id;
     private String username;
     private String email;
-    private Set<Role> roles;
+    private List<String> roles;
 
-    public JwtResponse(String token, String id, String username, String email, Set<Role> roles) {
+    public JwtResponse(String token, String id, String username, String email, List<String> roles) {
         this.token = token;
         this.id = id;
         this.username = username;
@@ -61,11 +62,11 @@ public class JwtResponse {
         this.email = email;
     }
 
-    public Set<Role> getRoles() {
+    public List<String> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(List<String> roles) {
         this.roles = roles;
     }
 }
